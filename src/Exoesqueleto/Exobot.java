@@ -1,22 +1,22 @@
 package Exoesqueleto;
 
-import EjercitoRuso.IHumanoExtremidad;
+import EjercitoRuso.LEIHumanoExtremidad;
 import InteligenciaArtificial.IABot;
 
-public class Exobot extends IABot implements IHumanoExtremidad {
-    private FuentePoder EfuentePoder;
-    private TurboReactor EturboReactor;
-    private BrazoDerecho EbrazoDerecho;
-    private BrazoIzquierdo Ebrazolzquierdo;
+public class Exobot extends IABot implements LEIHumanoExtremidad {
+    private LEFuentePoder EfuentePoder;
+    private LETurboReactor EturboReactor;
+    private LEBrazoDerecho EbrazoDerecho;
+    private LEBrazoIzquierdo Ebrazolzquierdo;
     private Pierna EpiernaDerecha;
     private Pierna Epiernalzquierda;
 
     public Exobot(IABot iaBot) {
         super(iaBot);
         // fuentePoder = new FuentePoder();
-        EturboReactor = new TurboReactor();
-        EbrazoDerecho = new BrazoDerecho();
-        Ebrazolzquierdo = new BrazoIzquierdo();
+        EturboReactor = new LETurboReactor();
+        EbrazoDerecho = new LEBrazoDerecho();
+        Ebrazolzquierdo = new LEBrazoIzquierdo();
         EpiernaDerecha = new Pierna();
         Epiernalzquierda = new Pierna();
 
