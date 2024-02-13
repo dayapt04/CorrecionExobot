@@ -42,7 +42,7 @@ public class LZMecatronico extends JSHumano {
             switch (opcionE) {
                 case 1:
                     LZDisenoExobot oLzDisenoExobot = new LZDisenoExobot();
-                    oLzDisenoExobot.lzVerExobot();
+                    oLzDisenoExobot.lzVerExabot();
                     opcionE = 2;
                     break;
                 case 2:
