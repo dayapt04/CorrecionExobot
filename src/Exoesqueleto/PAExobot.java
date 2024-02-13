@@ -5,7 +5,7 @@ package Exoesqueleto;
 import EjercitoRuso.*;
 import InteligenciaArtificial.JSIABot;
 
-public class PAExobot extends JSIABot implements IHumanoExtremidad {
+public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
     private PAFuentePoder EfuentePoder;
     private PATurboReactor EturboReactor;
     private PABrazoDerecho EbrazoDerecho;

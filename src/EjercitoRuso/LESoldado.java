@@ -1,6 +1,6 @@
 package EjercitoRuso;
 
-public class LESoldado extends JSHumano implements IHumanoExtremidad {
+public class LESoldado extends JSHumano implements LEIHumanoExtremidad {
     private Boolean habilidaBrazoIzquierdo;
     private Boolean habilidaBrazoDererecho;
 

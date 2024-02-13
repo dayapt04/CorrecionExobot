@@ -1,6 +1,6 @@
 package EjercitoRuso;
 
-public interface IHumanoExtremidad {
+public interface LEIHumanoExtremidad {
     Boolean brazolzquierdo = true;
     Boolean brazoDerecho = true;
     Boolean piernalzquierda = true;
