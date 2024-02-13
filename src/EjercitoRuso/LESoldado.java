@@ -1,21 +1,26 @@
 package EjercitoRuso;
 
+import Exoesqueleto.LEArmaBazucaI;
+import Exoesqueleto.LEArmaLaserD;
+import Exoesqueleto.LEArmaMetralletaI;
+import Exoesqueleto.LEBrazoDerecho;
+import Exoesqueleto.LEBrazoIzquierdo;
 import Exoesqueleto.LEFuentePoder;
 import Exoesqueleto.LETurboReactor;
 
 public class LESoldado extends Humano implements LEIHumanoExtremidad {
-    private Boolean leHabilidaBrazoIzquierdo;
-    private Boolean leHabilidaBrazoDererecho;
+    private Boolean leHabilidadBrazoIzquierdo;
+    private Boolean leHabilidadBrazoDererecho;
 
     public LESoldado(String nombre) {
         super(nombre);
 
         if (LESoldado.brazoDerecho)
-            setleHabilidaBrazoDererecho(getHabilidad());
-        System.out.println(" > Brazo Derecho : " + getleHabilidaBrazoDerecho());
+            setleHabilidadBrazoDererecho(getHabilidad());
+        System.out.println(" > Brazo Derecho : " + getleHabilidadBrazoDerecho());
         if (LESoldado.brazolzquierdo)
-            setleHabilidaBrazoIzquierdo(getHabilidad());
-        System.out.println(" > Brazo Izquierdo : " + getleHabilidaBrazoIzquierdo());
+            setleHabilidadBrazoIzquierdo(getHabilidad());
+        System.out.println(" > Brazo Izquierdo : " + getleHabilidadBrazoIzquierdo());
     }
 
     private boolean getHabilidad() {
@@ -23,20 +28,20 @@ public class LESoldado extends Humano implements LEIHumanoExtremidad {
         return (Math.random() * 100 < bias);
     }
 
-    public Boolean getleHabilidaBrazoIzquierdo() {
-        return leHabilidaBrazoIzquierdo;
+    public Boolean getleHabilidadBrazoIzquierdo() {
+        return leHabilidadBrazoIzquierdo;
     }
 
-    public void setleHabilidaBrazoIzquierdo(Boolean leHabilidaBrazoIzquierdo) {
-        this.leHabilidaBrazoIzquierdo = leHabilidaBrazoIzquierdo;
+    public void setleHabilidadBrazoIzquierdo(Boolean leHabilidadBrazoIzquierdo) {
+        this.leHabilidadBrazoIzquierdo = leHabilidadBrazoIzquierdo;
     }
 
-    public Boolean getleHabilidaBrazoDerecho() {
-        return leHabilidaBrazoDererecho;
+    public Boolean getleHabilidadBrazoDerecho() {
+        return leHabilidadBrazoDererecho;
     }
 
-    public void setleHabilidaBrazoDererecho(Boolean leHabilidaBrazoDererecho) {
-        this.leHabilidaBrazoDererecho = leHabilidaBrazoDererecho;
+    public void setleHabilidadBrazoDererecho(Boolean leHabilidadBrazoDererecho) {
+        this.leHabilidadBrazoDererecho = leHabilidadBrazoDererecho;
     }
 
     public void leReemplazarBateriaTurboReactor(LETurboReactor elTurboReactor) {
@@ -48,4 +53,6 @@ public class LESoldado extends Humano implements LEIHumanoExtremidad {
         System.out.println(" [] Recargando -- reemplazando batería.");
         LEFuentePoder.leNivelEnergia = 100;
     }
+
+    
 }

@@ -1,4 +1,5 @@
 import EjercitoRuso.LESoldado;
+import EjercitoRuso.Mecatronico;
 import Exoesqueleto.Exobot;
 import InteligenciaArtificial.IABot;
 
@@ -12,7 +13,8 @@ public class App {
             // Exobot e1 = new Exobot(iaBot);
             // Exobot e2 = new Exobot(iaBot);
             // Exobot e3 = new Exobot(iaBot);
-            LESoldado s1 = new LESoldado("Juan");
+            //LESoldado s1 = new LESoldado("Juan");
+
             // sLESoldado s2 = new LESoldado("Maria");
     
             // System.out.println(e1.getNombre());
@@ -20,5 +22,7 @@ public class App {
             // System.out.println(e3.getNombre());
     
             //lore-crear pelotones de soldados
+
+
     }
 }
