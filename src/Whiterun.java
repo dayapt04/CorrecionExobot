@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-import EjercitoRuso.Soldado;
+import EjercitoRuso.LESoldado;
 import Exoesqueleto.PAExobot;
 import Exoesqueleto.PAFuentePoder;
-import InteligenciaArtificial.IABot;
+import InteligenciaArtificial.JSIABot;
 
 public class Whiterun {
     Scanner sc = new Scanner(System.in);
 
     public void iniciar() throws InterruptedException {
 
-        IABot iabot = new IABot("IA-Whiterun");
+        JSIABot iabot = new JSIABot("IA-Whiterun");
         int nroPeloton = 5;
         int nroSoldado = 1;
         for (int contadorPelotones = 1; contadorPelotones <= nroPeloton; contadorPelotones++) {
@@ -19,15 +19,17 @@ public class Whiterun {
                 String idSoldado = "[S O L D A D O] " + (nroSoldado);
                 nroSoldado++;
                 PAExobot exobot = new PAExobot(iabot);
-                Soldado s = new Soldado(idSoldado);
+                LESoldado s = new LESoldado(idSoldado);
                 presentarSoldado(s, exobot, iabot);
             }
         }
 
     }
 
-    public void presentarSoldado(Soldado s, PAExobot e, IABot iaBot) throws InterruptedException {
+    public void presentarSoldado(LESoldado s, PAExobot e, JSIABot iaBot) throws InterruptedException {
         PAFuentePoder fuentePoder = new PAFuentePoder();
+        // ensamblaje mecatronico
+        // conocimientos tecnicos (exobot ha aprendido x idioma)
         e.inicializar(iaBot.PAgenerarCodigoInicializacion());
         e.PAunirSoldado(s);
         System.out.println();

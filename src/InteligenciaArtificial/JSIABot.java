@@ -2,22 +2,22 @@ package InteligenciaArtificial;
 
 import java.security.SecureRandom;
 
-public class IABot {
+public class JSIABot {
     // Singleton Pattern
-    private static IABot instance;
+    private static JSIABot instance;
     private static String nombre;
 
-    private IABot() {
+    private JSIABot() {
     }
 
-    protected IABot(IABot iaBot) {
+    protected JSIABot(JSIABot iaBot) {
         if (iaBot != null)
             instance = iaBot;
     }
 
-    public static IABot getInstance(String nombre) {
+    public static JSIABot getInstance(String nombre) {
         if (instance == null) {
-            instance = new IABot();
+            instance = new JSIABot();
             instance.setNombre(nombre);
         }
         return instance;
@@ -28,11 +28,11 @@ public class IABot {
     }
 
     public void setNombre(String nombre) {
-        IABot.nombre = nombre;
+        JSIABot.nombre = nombre;
     }
 
-    public IABot(String nombre) {
-        IABot.nombre = nombre;
+    public JSIABot(String nombre) {
+        JSIABot.nombre = nombre;
     }
 
     public String PAgenerarCodigoInicializacion() {

@@ -11,7 +11,7 @@ public abstract class PAArmaDerecha {
         this.tipo = tipo;
     }
 
-    public void disparar(int tiempo) throws InterruptedException {
+    public void paDisparar(int tiempo) throws InterruptedException {
         System.out.println("\n Disparando Arma Derecha: ");
         for (int i = 0; i < tiempo; i++) {
             System.out.print(" * ");

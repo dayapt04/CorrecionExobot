@@ -3,9 +3,9 @@ package Exoesqueleto;
 // import javax.imageio.plugins.tiff.ExifInteroperabilityTagSet;
 
 import EjercitoRuso.*;
-import InteligenciaArtificial.IABot;
+import InteligenciaArtificial.JSIABot;
 
-public class PAExobot extends IABot implements IHumanoExtremidad {
+public class PAExobot extends JSIABot implements IHumanoExtremidad {
     private PAFuentePoder EfuentePoder;
     private PATurboReactor EturboReactor;
     private PABrazoDerecho EbrazoDerecho;
@@ -13,7 +13,7 @@ public class PAExobot extends IABot implements IHumanoExtremidad {
     private PAPierna EpiernaDerecha;
     private PAPierna Epiernalzquierda;
 
-    public PAExobot(IABot iaBot) {
+    public PAExobot(JSIABot iaBot) {
         super(iaBot);
         EturboReactor = new PATurboReactor();
         EbrazoDerecho = new PABrazoDerecho();
@@ -27,7 +27,7 @@ public class PAExobot extends IABot implements IHumanoExtremidad {
         return true;
     }
 
-    public void PAunirSoldado(Soldado soldado) {
+    public void PAunirSoldado(LESoldado soldado) {
         if (PAExobot.brazolzquierdo && Ebrazolzquierdo != null)
             System.out.print("\nArma Izquierda: ");
         if (soldado.getHabilidaBrazoIzquierdo()) {
@@ -54,8 +54,8 @@ public class PAExobot extends IABot implements IHumanoExtremidad {
     }
 
     public void paDispararArma() throws InterruptedException {
-        Ebrazolzquierdo.arma.disparar(10);
-        EbrazoDerecho.arma.disparar(10);
+        Ebrazolzquierdo.arma.paDisparar(10);
+        EbrazoDerecho.arma.paDisparar(10);
     }
 
     public void paRecargarFuentePoder(PAFuentePoder fuente) {

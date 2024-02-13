@@ -1,16 +1,16 @@
 package EjercitoRuso;
 
-public class Soldado extends Humano implements IHumanoExtremidad {
+public class LESoldado extends JSHumano implements IHumanoExtremidad {
     private Boolean habilidaBrazoIzquierdo;
     private Boolean habilidaBrazoDererecho;
 
-    public Soldado(String nombre) {
+    public LESoldado(String nombre) {
         super(nombre);
         System.out.println("\n\t -" + nombre + "-");
-        if (Soldado.brazolzquierdo)
+        if (LESoldado.brazolzquierdo)
             setHabilidaBrazoIzquierdo(getHabilidad());
         System.out.println("Habilidad en Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
-        if (Soldado.brazoDerecho)
+        if (LESoldado.brazoDerecho)
             setHabilidaBrazoDererecho(getHabilidad());
         System.out.println("Habilidad en Brazo Derecho: " + getHabilidaBrazoDererecho());
     }
