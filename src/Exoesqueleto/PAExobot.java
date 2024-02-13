@@ -22,6 +22,11 @@ public class PAExobot extends IABot implements IHumanoExtremidad {
         Epiernalzquierda = new PAPierna();
     }
 
+    public Boolean inicializar(String codigo) {
+        System.out.println("El IABot ha otorgado el código: " + codigo + ".\n\n\t INICIALIZANDO EXOBOT...");
+        return true;
+    }
+
     public void PAunirSoldado(Soldado soldado) {
         if (PAExobot.brazolzquierdo && Ebrazolzquierdo != null)
             System.out.print("\nArma Izquierda: ");
@@ -48,9 +53,9 @@ public class PAExobot extends IABot implements IHumanoExtremidad {
         }
     }
 
-    public Boolean inicializar(String codigo) {
-        System.out.println("El IABot ha otorgado el código: " + codigo + ".\n\n\t INICIALIZANDO EXOBOT...");
-        return true;
+    public void paDispararArma() throws InterruptedException {
+        Ebrazolzquierdo.arma.disparar(10);
+        EbrazoDerecho.arma.disparar(10);
     }
 
     public void paRecargarFuentePoder(PAFuentePoder fuente) {
