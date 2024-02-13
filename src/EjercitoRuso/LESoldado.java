@@ -9,10 +9,10 @@ public class LESoldado extends JSHumano implements LEIHumanoExtremidad {
         System.out.println("\n\t -" + nombre + "-");
         if (LESoldado.brazolzquierdo)
             setHabilidaBrazoIzquierdo(getHabilidad());
-        System.out.println("Habilidad en Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
+        System.out.println(" -> Habilidad en Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
         if (LESoldado.brazoDerecho)
             setHabilidaBrazoDererecho(getHabilidad());
-        System.out.println("Habilidad en Brazo Derecho: " + getHabilidaBrazoDererecho());
+        System.out.println(" -> Habilidad en Brazo Derecho: " + getHabilidaBrazoDererecho());
     }
 
     boolean getHabilidad() {

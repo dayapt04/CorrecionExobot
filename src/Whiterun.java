@@ -8,6 +8,8 @@ import Exoesqueleto.PAExobot;
 import Exoesqueleto.PAFuentePoder;
 import InteligenciaArtificial.JSIABot;
 
+
+
 public class Whiterun {
     Scanner sc = new Scanner(System.in);
 
@@ -17,7 +19,9 @@ public class Whiterun {
 
         int nroPeloton = 5;
         int nroSoldado = 1;
-        System.out.println("\nEl programa 'ExoBot' ha sido creado como parte de una estrategia de preparación de Rusia para enfrentarse en la guerra contra Ucrania.");
+        System.out.println("------------------------------------------------------------------------------------------------");
+        System.out.println(" El programa 'ExoBot' ha sido creado como parte de una estrategia de preparación de Rusia para \nenfrentarse en la guerra contra Ucrania.");
+        System.out.println("-------------------------------------------------------------------------------------------------");
         System.out.println("\n\t\t¡BIENVENIDOS A WHITERUN!");
         for (int contadorPelotones = 1; contadorPelotones <= nroPeloton; contadorPelotones++) {
             for (int contadorSoldados = 0; contadorSoldados < 5; contadorSoldados++) {
