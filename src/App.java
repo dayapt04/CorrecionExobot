@@ -1,18 +1,18 @@
-import EjercitoRuso.Soldado;
-import Exoesqueleto.Exobot;
-import InteligenciaArtificial.IABot;
+import EjercitoRuso.LESoldado;
+import Exoesqueleto.PAExobot;
+import InteligenciaArtificial.JSIABot;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // IABot iaBot = IABot.getInstance("Ana");
         // IABot iaBot2 = IABot.getInstance("Pepe");
         // IABot iaBot3 = IABot.getInstance("Juan");
-        IABot iaBot = IABot.getInstance("Ana");
-        Exobot e1 = new Exobot(iaBot);
-        Exobot e2 = new Exobot(iaBot);
-        Exobot e3 = new Exobot(iaBot);
-        Soldado s1 = new Soldado("Juan");
-        Soldado s2 = new Soldado("Maria");
+        JSIABot iaBot = JSIABot.getInstance("Ana");
+        PAExobot e1 = new PAExobot(iaBot);
+        PAExobot e2 = new PAExobot(iaBot);
+        PAExobot e3 = new PAExobot(iaBot);
+        LESoldado s1 = new LESoldado("Juan");
+        LESoldado s2 = new LESoldado("Maria");
 
         System.out.println(e1.getNombre());
         System.out.println(e2.getNombre());
