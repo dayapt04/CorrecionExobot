@@ -13,6 +13,12 @@ public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
     private PAPierna EpiernaDerecha;
     private PAPierna Epiernalzquierda;
 
+    static String amarillo = "\u001b[33m";
+    static String Reset = "\u001b[0m";
+    static String naranja = "\u001b[38;5;202m";
+    static String rojo = "\u001b[31m";
+
+
     public PAExobot(JSIABot iaBot) {
         super(iaBot);
         EturboReactor = new PATurboReactor();
@@ -23,31 +29,31 @@ public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
     }
 
     public Boolean inicializar(String codigo) {
-        System.out.println("El IABot ha otorgado el código: " + codigo + ".\n\n\t INICIALIZANDO EXOBOT...");
+        System.out.println(amarillo+"\n -> El IABot ha otorgado el código: "+ Reset + codigo + ".\n\n\t INICIALIZANDO EXOBOT...");
         return true;
     }
 
     public void PAunirSoldado(LESoldado soldado) {
         if (PAExobot.brazolzquierdo && Ebrazolzquierdo != null)
-            System.out.print("\nArma Izquierda: ");
+            System.out.print("\n - Arma Izquierda: ");
         if (soldado.getHabilidaBrazoIzquierdo()) {
-            PAArmaMetralleta m = new PAArmaMetralleta("Metralleta MK61");
+            PAArmaMetralleta m = new PAArmaMetralleta(rojo+"Metralleta MK61"+Reset);
             Ebrazolzquierdo.setArmaIzquierda(m);
             System.out.println(m.getTipo() + ".");
         } else {
-            PAArmaBazuca b = new PAArmaBazuca("Bazuca Antiataque");
+            PAArmaBazuca b = new PAArmaBazuca(rojo+"Bazuca Antiataque"+Reset);
             Ebrazolzquierdo.setArmaIzquierda(b);
             System.out.println(b.getTipo() + ".");
         }
 
         if (PAExobot.brazoDerecho && EbrazoDerecho != null)
-            System.out.print("\nArma Derecha: ");
+            System.out.print("\n - Arma Derecha: ");
         if (soldado.getHabilidaBrazoDererecho()) {
-            PAArmaLaser laser = new PAArmaLaser("Láser");
+            PAArmaLaser laser = new PAArmaLaser(naranja+"Láser"+Reset);
             EbrazoDerecho.setArmaDerecha(laser);
             System.out.println(laser.getTipo() + ".");
         } else {
-            PAArmaLanzaFuego lanzaFuego = new PAArmaLanzaFuego("LanzaFuego");
+            PAArmaLanzaFuego lanzaFuego = new PAArmaLanzaFuego(naranja+"LanzaFuego"+Reset);
             EbrazoDerecho.setArmaDerecha(lanzaFuego);
             System.out.println(lanzaFuego.getTipo() + ".");
         }
@@ -63,7 +69,7 @@ public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
             this.EfuentePoder = fuente;
             EfuentePoder = new PAFuentePoder();
             EfuentePoder.recargar();
-            System.out.println("\nLa fuente de poder se ha recargado con éxito.");
+            System.out.println("\n -> La fuente de poder se ha recargado con éxito.");
         }
     }
 

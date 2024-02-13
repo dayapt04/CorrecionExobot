@@ -11,10 +11,13 @@ public abstract class PAArmaDerecha {
         this.tipo = tipo;
     }
 
+    static String Reset = "\u001b[0m";
+    static String naranja = "\u001b[38;5;202m";
+
     public void paDisparar(int tiempo) throws InterruptedException {
         System.out.println("\n Disparando Arma Derecha: ");
         for (int i = 0; i < tiempo; i++) {
-            System.out.print(" * ");
+            System.out.print(naranja+"==="+Reset);
             Thread.sleep(100);
         }
         System.out.println();

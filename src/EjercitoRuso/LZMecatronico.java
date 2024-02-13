@@ -13,9 +13,14 @@ public class LZMecatronico extends JSHumano {
 
     Scanner sc = new Scanner(System.in);
 
+    static String rosa = "\u001b[38;5;205m";
+    static String Reset = "\u001b[0m";
+    static String verde = "\u001b[38;5;76m";
+
     public void ensamblarExobot(LESoldado leSoldado, PAExobot Exobot, JSIABot IaBot) throws InterruptedException {
         int opcionE;
-        System.out.println("Emsamblando Exobot, por favor espere");
+        System.out.println("-------------------------------------------");
+        System.out.println(verde+" -> Emsamblando Exobot, por favor espere: "+rosa);
         for (int i = 0; i <= 100; i++) {
             int nSpacios = 2 - (i % 3);
             String bStatus = "";
@@ -29,9 +34,10 @@ public class LZMecatronico extends JSHumano {
             System.out.print(bStatus + " " + i + "%\r");
             Thread.sleep(70);
         }
-        System.out.println("Su ExoBot ha sido ensamblado");
+        System.out.println(Reset+verde+" -> Su ExoBot ha sido ensamblado."+Reset);
+        System.out.println("-------------------------------------------");
         do {
-            System.out.println("Desea ver su ExoBot: \n1. Si \n2. No");
+            System.out.println(" -> Desea ver su ExoBot: \n1. Si \n2. No");
             opcionE = sc.nextInt();
             switch (opcionE) {
                 case 1:
