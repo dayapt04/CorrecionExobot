@@ -1,11 +1,12 @@
 package InteligenciaArtificial;
 
+import java.security.SecureRandom;
+
 public class IABot {
     // Singleton Pattern
     private static IABot instance;
     private static String nombre;
 
-    // hacer el constructor privado para evitar la inicializado
     private IABot() {
     }
 
@@ -32,5 +33,16 @@ public class IABot {
 
     public IABot(String nombre) {
         IABot.nombre = nombre;
+    }
+
+    public String PAgenerarCodigoInicializacion() {
+        SecureRandom idExobot = new SecureRandom();
+        String caracteresPosibles = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder builder = new StringBuilder(4);
+        for (int i = 0; i < 4; i++) {
+            int pos = idExobot.nextInt(caracteresPosibles.length());
+            builder.append(caracteresPosibles.charAt(pos));
+        }
+        return builder.toString().toUpperCase();
     }
 }

@@ -9,14 +9,10 @@ public class Soldado extends Humano implements IHumanoExtremidad {
         this.habilidaBrazoIzquierdo = getHabilidad();
         if (Soldado.brazoDerecho)
             setHabilidaBrazoDererecho(getHabilidad());
-        System.out.println("Brazo Derecho: " + getHabilidaBrazoDererecho());
+        System.out.println("Habilidad en Brazo Derecho: " + getHabilidaBrazoDererecho());
         if (Soldado.brazolzquierdo)
             setHabilidaBrazoIzquierdo(getHabilidad());
-        System.out.println("Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
-
-        // for (int i = 0; i < 10; i++) {
-        // System.out.println(getHabilidad());
-        // }
+        System.out.println("Habilidad en Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
     }
 
     boolean getHabilidad() {
