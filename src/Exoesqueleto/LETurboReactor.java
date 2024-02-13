@@ -18,7 +18,7 @@ public class LETurboReactor {
     public void leVolar() {
         for (int porcentajeBateria = 100; porcentajeBateria >= 0; porcentajeBateria--) {
             System.out.print("\r -->  Exobot Volando...");
-            System.out.println(" -> batería al " + porcentajeBateria + "%");
+            System.out.println(" ->  batería al " + porcentajeBateria + "%");
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
