@@ -1,12 +1,13 @@
 package EjercitoRuso;
+
 import Exoesqueleto.JSITecnicoEspanol;
 
+public class JSExpertoEspanol extends JSHumano {
 
-public class JSExpertoEspanol extends JSHumano{
-
-    public JSExpertoEspanol(String jsNombre){
+    public JSExpertoEspanol(String jsNombre) {
         super(jsNombre);
     }
+
     public void jsTrasferirLexicoEspanol(JSITecnicoEspanol jsExoBot) {
         jsExoBot.jsAprenderLexicoEspanol();
     }
@@ -19,8 +20,9 @@ public class JSExpertoEspanol extends JSHumano{
         jsexoBot.jsAprenderFoneticaEspanol();
 
     }
+
     public String getNombre() {
         return getJsNombre();
 
-}
+    }
 }

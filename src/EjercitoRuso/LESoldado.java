@@ -6,17 +6,13 @@ public class LESoldado extends JSHumano implements LEIHumanoExtremidad {
 
     public LESoldado(String nombre) {
         super(nombre);
-        this.habilidaBrazoIzquierdo = getHabilidad();
-        if (LESoldado.brazoDerecho)
-            setHabilidaBrazoDererecho(getHabilidad());
-        System.out.println("Brazo Derecho: " + getHabilidaBrazoDererecho());
+        System.out.println("\n\t -" + nombre + "-");
         if (LESoldado.brazolzquierdo)
             setHabilidaBrazoIzquierdo(getHabilidad());
-        System.out.println("Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
-
-        // for (int i = 0; i < 10; i++) {
-        // System.out.println(getHabilidad());
-        // }
+        System.out.println("Habilidad en Brazo Izquierdo: " + getHabilidaBrazoIzquierdo());
+        if (LESoldado.brazoDerecho)
+            setHabilidaBrazoDererecho(getHabilidad());
+        System.out.println("Habilidad en Brazo Derecho: " + getHabilidaBrazoDererecho());
     }
 
     boolean getHabilidad() {

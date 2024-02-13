@@ -9,12 +9,12 @@ public abstract class JSHumano {
 
     public String getJsNombre() {
         return jsNombre;
-        
+
     }
 
     public void setJsNombre(String jsNombre) {
         this.jsNombre = jsNombre;
-        
+
     }
 
     public String GetNombre() {

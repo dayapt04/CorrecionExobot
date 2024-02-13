@@ -13,13 +13,13 @@ public class LZMecatronico extends JSHumano {
 
     Scanner sc = new Scanner(System.in);
 
-    public void ensamblarExobot(LESoldado leSoldado, PAExobot Exobot, JSIABot IaBot) {
+    public void ensamblarExobot(LESoldado leSoldado, PAExobot Exobot, JSIABot IaBot) throws InterruptedException {
         int opcionE;
         System.out.println("El soldado consta de las siguientes habilidades: ");
-        System.out.println("Brazo Derecho, habilidad: " + leSoldado.getHabilidaBrazoDerecho());
+        System.out.println("Brazo Derecho, habilidad: " + leSoldado.getHabilidaBrazoDererecho());
         System.out.println("Brazo Izquierdo, habilidad: " + leSoldado.getHabilidaBrazoIzquierdo());
         System.out.println("Su ExoBot tendrá las siguientes armas: ");
-        Exobot.unirseSoldado(leSoldado);
+        Exobot.PAunirSoldado(leSoldado);
 
         System.out.println("Emsamblando Exobot, por favor espere");
         for (int i = 0; i <= 100; i++) {

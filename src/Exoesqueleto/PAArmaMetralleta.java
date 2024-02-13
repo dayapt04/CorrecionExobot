@@ -1,5 +1,8 @@
 package Exoesqueleto;
 
-public class PAArmaMetralleta {
+public class PAArmaMetralleta extends PAArmaIzquierda {
 
+    public PAArmaMetralleta(String tipo) {
+        super(tipo);
+    }
 }
