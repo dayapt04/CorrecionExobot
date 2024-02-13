@@ -1,5 +1,6 @@
 package EjercitoRuso;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Exoesqueleto.PAExobot;
@@ -20,7 +21,7 @@ public class LZMecatronico extends JSHumano {
     public void ensamblarExobot(LESoldado leSoldado, PAExobot Exobot, JSIABot IaBot) throws InterruptedException {
         int opcionE;
         System.out.println("-------------------------------------------");
-        System.out.println(verde+" -> Emsamblando Exobot, por favor espere: "+rosa);
+        System.out.println(verde + " -> Emsamblando Exobot, por favor espere: " + rosa);
         for (int i = 0; i <= 100; i++) {
             int nSpacios = 2 - (i % 3);
             String bStatus = "";
@@ -34,25 +35,29 @@ public class LZMecatronico extends JSHumano {
             System.out.print(bStatus + " " + i + "%\r");
             Thread.sleep(70);
         }
-        System.out.println(Reset+verde+" -> Su ExoBot ha sido ensamblado."+Reset);
+        System.out.println(Reset + verde + " -> Su ExoBot ha sido ensamblado." + Reset);
         System.out.println("-------------------------------------------");
         do {
-            System.out.println(" -> Desea ver su ExoBot: \n1. Si \n2. No");
-            opcionE = sc.nextInt();
-            switch (opcionE) {
-                case 1:
-                    LZDisenoExobot oLzDisenoExobot = new LZDisenoExobot();
-                    oLzDisenoExobot.lzVerExabot();
-                    opcionE = 2;
-                    break;
-                case 2:
-                    break;
-                default:
-                    System.out.println("\nOpción no válida.\nPor favor ingrese una opción correcta.");
-                    break;
+            try {
+                System.out.println(" -> Desea ver su ExoBot: \n1. Si \n2. No");
+                opcionE = sc.nextInt();
+                switch (opcionE) {
+                    case 1:
+                        LZDisenoExobot oLzDisenoExobot = new LZDisenoExobot();
+                        oLzDisenoExobot.lzVerExabot();
+                        opcionE = 2;
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        System.out.println("\nOpción no válida.\nPor favor ingrese una opción correcta.");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.err.println("Error: Ingrese un número entero válido.");
+                sc.nextLine();
+                opcionE = 0;
             }
         } while (opcionE != 2);
-
     }
-
 }
