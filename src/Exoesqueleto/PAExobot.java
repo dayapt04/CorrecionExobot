@@ -5,7 +5,7 @@ import InteligenciaArtificial.JSIABot;
 
 public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
     private PAFuentePoder EfuentePoder;
-    private TurboReactor EturboReactor;
+    private PATurboReactor EturboReactor;
     private PABrazoDerecho EbrazoDerecho;
     private PABrazoIzquierdo Ebrazolzquierdo;
     private PAPierna EpiernaDerecha;
@@ -14,7 +14,7 @@ public class PAExobot extends JSIABot implements LEIHumanoExtremidad {
     public PAExobot(JSIABot iaBot) {
         super(iaBot);
         // fuentePoder = new FuentePoder();
-        EturboReactor = new TurboReactor();
+        EturboReactor = new PATurboReactor();
         EbrazoDerecho = new PABrazoDerecho();
         Ebrazolzquierdo = new PABrazoIzquierdo();
         EpiernaDerecha = new PAPierna();
