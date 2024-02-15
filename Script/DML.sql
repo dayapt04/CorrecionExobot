@@ -1,0 +1,13 @@
+-- database: Exobot.sqlite
+
+INSERT OR REPLACE INTO IABot (IdIABot, Nombre) VALUES ((SELECT IdIABot FROM IABot WHERE Nombre = 'IABOT'), 'IABOT');
+
+BEGIN TRANSACTION;
+WITH RECURSIVE cnt(x) AS (SELECT 1 UNION ALL SELECT x+1 FROM cnt WHERE x < 1000)
+INSERT INTO ExaBot (IdIABot, Nombre, Serie)
+SELECT (SELECT IdIABot FROM IABot WHERE Nombre = 'IABOT'), 'exabot' || x, 'Serie E' || x FROM cnt
+WHERE (SELECT COUNT(*) FROM ExaBot) < 1000;
+COMMIT;
+
+DELETE FROM ExaBot;
+
